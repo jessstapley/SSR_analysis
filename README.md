@@ -17,7 +17,7 @@ In this directory create the following sub directories
 Nothing else should go into the 'data' subdirectory.
 
 # Step 3: Copy files from this repository 
-There are a couple of ways to copy the files from github. An easy option is to clone the directory.
+There are a couple of ways to copy the files from github. An easy option is dowload the directory. Click on code and choose download zip.
 Then move the R scripts into  'scripts' subdirectory and  the 'MsatAllele_1.05.tar.gz' to the 'paackage' subdirectory.
 
 # Step 4: Create an R Project
