@@ -1,5 +1,5 @@
 
-# Now we will use another package to bin the peak sizes into distinct size classes
+# We will use the package 'MsatAllele' to bin the peak sizes into distinct size classes
 # This is necessary to ensure we can consistently call the peak size across multiple data sets and multiple researchers
 
 #############################################
