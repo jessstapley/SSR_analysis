@@ -7,10 +7,9 @@
 #############################################
 
 # This package is no longer maintained on the CRAN website, so we need to use an archived version.
-# The package (tar.gz) should be in your 'package' subdirectory
 
-# We need to Install the package - go to Install packages and change the option to Install From 'Package Archive File' 
-# Then select the archive file 'MsatAllele_1.05.tar.gz'
+# To Install the package - go to Install packages and change the option to Install From 'Package Archive File' 
+# Then select the archive file 'MsatAllele_1.05.tar.gz' 
 # When the package is installed then load the library
 
 library(MsatAllele)
@@ -23,11 +22,11 @@ db_{SSR name} <- read.ah.file("out/pos_{SSR name}.txt", date="{add date i.e 12-0
 ######### Step 2 - Investigate variation in peak sizes
 #############################################
 
-# Here we will plot the data to look at the sizes of the peaks.
+# Now we plot the data to look at the sizes of the peaks.
 # These two graphs are useful for visualising the variability in peak sizes.
-# There is error around the peak position and the sizing is not always accurate.
-# Peaks that are very close together (< 1bp difference) are really the same SSR repeat length.
-# Some SSR PCR products are more variable and sometimes we need to bin them into a single size class.
+# There is often error around the peak position and the sizing is not always accurate.
+# Peaks that are very close together (< 1bp difference) most likely have the same SSR repeat length.
+# Also some SSR PCR products are difficult to size accrautely and we need to bin them into a single size class.
 # So we need to see the variation in peak positions 
 # This is why this package is useful.
 
