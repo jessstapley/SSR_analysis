@@ -1,11 +1,11 @@
 # Short Sequence Repeat Analysis in R
 
-This respository contains instructions and scripts for analysing short sequence repeats (SSR) or microsatellites using R. The analysis uses files created by a DNA Fragment Capillary Sequencer (.fsa) - no included in this repository.
+This respository contains instructions and scripts for analysing short sequence repeats (SSR) or microsatellites using R. The analysis uses files created by a DNA Fragment Capillary Sequencer (.fsa, not included in this repository).
 
 # Step 1: Create an R Project directory.
-Create a directory on you computer where you can store all the data related to this project. Using the approach outlined below will ensure that your data and results are well organised - this is an important step for data management. Data analysis, just like your laboratory methods must be properly recorded. Just like you must keep an accurate record of your what you did in the lab (lab book) you must also keep an accurate record of your analysis, and just like a lab book, this should be clear enough that someone can assess your methods and replicate your work. 
+This step is essential to ensure your your data and results are well organised and recorded. Data analysis must be properly recorded. Just like you must keep an accurate record of your what you did in the lab (lab book) you must also keep an accurate record of your analysis, and just like a lab book, this should be clear enough that someone can assess your methods and replicate your work. If you store all relevenat files in a well organised directory (folder) with appropriately named subdirectories, this will help enormously.
 
-Name the folder accordingly. Do not use spaces or weird characters in your folder or filenames (eg. use underscore '_'_ instead of spaces)
+Name the folder accordingly. Do not use spaces or weird characters (*#%&=!*) in your folder or filenames (eg. use ounderscore '_'_ instead of spaces)
 In this directory create the following sub directories 
 - data
 - plots
