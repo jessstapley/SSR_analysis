@@ -10,7 +10,8 @@
 #############################################
 
 # first we need to create a data file that poppr can read - we will use a genalex file.
-# see https://biology-assets.anu.edu.au/GenAlEx/Download_files/GenAlEx%206.5%20Guide.pdf
+# Look at 'genelax_format.png'. 
+# If you need more information see https://biology-assets.anu.edu.au/GenAlEx/Download_files/GenAlEx%206.5%20Guide.pdf
 # We will edit the file you made before (out/Results_{SSR name}.csv) in excel. 
 
 # HINTS: 
@@ -84,7 +85,3 @@ lt
 locus_table(res, pop = "{pop name }")
 
 # How does the results compare?
-
-
-
-
