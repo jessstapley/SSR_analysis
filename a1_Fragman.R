@@ -1,11 +1,8 @@
 # Analysis of SSR fragment size with R:Fragman
 
 # NB: The DNA fragment analyzer is a capillary sequencer. 
-# For more information watch this video
-# https://www.thermofisher.com/blog/behindthebench/how-does-fragment-analysis-work-seq-it-out-3/
-
 # It detects flourescently labelled DNA that is passing though a capillary.
-# Different fragments (SSRs, Size standard) are labelled with a different colour (dye).
+# Different fragments (SSRs, Size standard) are labelled with a different colours (dye).
 # The fluorescently labelled DNA fragments, separated by size, move through the path of a laser beam.
 # The laser causes the dyes to fluoresce at different wavelengths (colours)
 # A camera detects the fluorescence and records the size and time of the flourescent peak.
@@ -13,6 +10,9 @@
 # To convert the peak time recorded by the machine to a size in base pairs we use a size standard or ladder. 
 # This contains flourescently labelled DNA fragments of known size and creates peaks at regular intervals.
 # We calibrate the ouput from the electrophoregram to determine the size of the peak in base pairs (bp)
+
+# IMPORTANT: The package attempts to find the peaks position - but sometimes it does not get it right. 
+# You may need to check and edit the peak positions. This is a slow tedious process, but has to be done carefully.
 
 
 # Questions you need to answer before anaylsing data 
@@ -52,7 +52,7 @@ my.ladder <- c(75,100,139,150,160,200,250,300,340,350,400,450,490,500)
 #############################################
 ######### Step 2 - Sizing the peaks of the ladder
 #############################################
-# This step is to find the real peaks of the ladder adn store the infromation in the R environment
+# This step is to find the real peaks of the ladder and store the information in the R environment
 ladder.info.attach(stored=my.data, ladder=my.ladder, ladd.init.thresh=10000, channel.ladder = 5,attempt = 7)
 
 
@@ -61,10 +61,10 @@ ladder.info.attach(stored=my.data, ladder=my.ladder, ladd.init.thresh=10000, cha
 # For e.g what is the channel ladder ?
 
 # Look at how well the software identified the ladder peaks
-# Look through the plots - use the arrows when in the 'Plots' tab in the bottom right panel. 
+# Look through the plots - HINT: use the arrows when in the 'Plots' tab in the bottom right panel of R Studio. 
 # Sometimes the peaks are too small to be detected or the software did not identify the peaks.
 # then you will need to reduce 'ladd.init.thresh'
-# If you  need to correct ladder for one or two samples - using the ladder.corrector. 
+# If you  need to correct the ladder for one or two samples - use the ladder.corrector(). 
 # Here you need to manually click on the correct peak positions.
 
 ladder.corrector(stored=my.data, to.correct="{sample_name.fsa}" ,channel = 5,
