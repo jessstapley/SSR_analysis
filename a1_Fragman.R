@@ -63,7 +63,7 @@ ladder.info.attach(stored=my.data, ladder=my.ladder, ladd.init.thresh=10000, cha
 # Look at how well the software identified the ladder peaks
 # Look through the plots - HINT: use the arrows when in the 'Plots' tab in the bottom right panel of R Studio. 
 # Sometimes the peaks are too small to be detected or the software did not identify the peaks.
-# then you will need to reduce 'ladd.init.thresh'
+# Then you will need to modify some parameters, e.g. reduce 'ladd.init.thresh'
 # If you  need to correct the ladder for one or two samples - use the ladder.corrector(). 
 # Here you need to manually click on the correct peak positions.
 
@@ -93,11 +93,12 @@ my.panel.{SSR name}
 
 # Look at the graphs again. A pink shaded area is the position that the software has labelled as a peak.
 
-# Has the software found the right peaks?
-# Sometimes  it chooses the wrong peak. We will discuss how to know what is the right peak.
+# Do you agree with the software? 
+# Sometimes  it chooses the wrong peak. 
+# The TRUE peak is the normally the highest? We will discuss ways to know which is the right peak.
  
 # To fix this problem you have two options. I recommend Option 1.
-# Option 1. Create a panel that has many more possible peak positions. The easiest way is to create a sequence of numbers isong 'seq()'
+# Option 1. Create a panel that has many more possible peak positions. The easiest way is to create a sequence of numbers is using 'seq()'
 ?seq
 
 # if xlim=c(170,200)
@@ -106,14 +107,14 @@ my.panel.{SSR name} <- seq(from=170, to=200, by=0.05)
 # then rerun score.markers. NB the structure of my.panel.{SSR name} object has changed see it now
 my.panel.{SSR name}
 
-# you no longer need to specifc the '$channel_1', instead rerun as follows
+# you no longer need to specify the column name ($channel_1), instead rerun as follows
 
 {SSR name} <- score.markers(my.inds=my.data, panel= my.panel.{SSR name}, 
                             ladder=my.ladder, channel.ladder=5, channel = {channel colour} )
 
 # Check the peaks - is this better?
 
-# Option 2. Is use the click on the manually choose the peak positions. 
+# Option 2. Choose the peaks by manually clocking on the peaks in the plot window.
 # This can be useful if you have only a few positions, but it can be time consuming and is less repeatable because people will vary in how they choose these postions.
 
 {SSR name} <- score.markers(my.inds=my.data, panel= my.panel.{SSR name}$channel_1, 
@@ -121,7 +122,7 @@ my.panel.{SSR name}
 
 my.panel.{SSR name} <- locator(type="p", pch=20, col="blue",init.thresh=2500,)$x
 
-# note the plot is in an interactive mode - you can click on the peaks that you want to include in the panel
+# note the plot is now in an interactive mode - you can click on the peaks that you want to include in the panel
 # pres Esc to exit the plot window
 # now look at the panel again
 my.panel.{SSR name}
@@ -169,4 +170,4 @@ write.table(newpos.{SSR name},
 ####################################
 ######### Save when you exit R  ####
 ####################################
-
+# if you dont save - you will have to do it agian!
