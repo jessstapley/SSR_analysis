@@ -35,4 +35,6 @@ Done
 
 NB: When you quit R you will be asked if you wan to save your project data (.RData). Say YES!
 
-
+# Step 5: Begin the Analysis 
+Double click on the .Rproj file
+Follow the instucitons in the scripts - starting with a1_Fragman.R
