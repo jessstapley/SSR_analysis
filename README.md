@@ -15,6 +15,9 @@ In this directory create the following sub directories
 
 # Step 2: Copy the raw data (.fsa) files into the 'data' subdirectory
 Nothing else should go into the 'data' subdirectory.
+The .fsa files are produced by the DNA fragment analyzer, which is a capillary sequencer - for more information watch this video \
+https://www.thermofisher.com/blog/behindthebench/how-does-fragment-analysis-work-seq-it-out-3/
+
 
 # Step 3: Copy files from this repository 
 There are a couple of ways to copy the files from github. An easy option is dowload the directory. Click on code and choose download zip.
