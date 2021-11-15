@@ -25,9 +25,9 @@ db_{SSR name} <- read.ah.file("out/pos_{SSR name}.txt", date="{add date i.e 12-0
 # Now we plot the data to look at the sizes of the peaks.
 # These two graphs are useful for visualising the variability in peak sizes.
 # There is often error around the peak position and the sizing is not always accurate.
-# Peaks that are very close together (< 1bp difference) most likely have the same SSR repeat length.
+# Peaks that are very close together (< 1bp difference) most likely have the same SSR repeat length (a.k.a same allele).
 # Also some SSR PCR products are difficult to size accrautely and we need to bin them into a single size class.
-# So we need to see the variation in peak positions 
+# So we need to see the variation in peak positions in order to be sure we correctly label the allele size.
 # This is why this package is useful.
 
 # Lets look at the data
@@ -38,7 +38,6 @@ AlleleHist(db_{SSR name} , "{SSR name}", limits=0.01, ticks=1)
 
 # How much spread is there for the peaks? 
 # What does the distribution of peak sizes look like?
-# We expect a normal distribution in pak sizes?
 
 # We can also get the exact variation around each peak size using this function 
 
@@ -55,7 +54,7 @@ bs_{SSR name} <-  BinStat(db_{SSR name}, "{SSR name}")
 
 bs_{SSR name} <-  BinStat(db_{SSR name}, "{SSR name}")
 
-# read in data again as data frame 
+# read in data again as a data frame 
 dat <- read.table("out/pos_{SSR name}.txt")
 names(dat) <- c("Sample.Name", "Colour", "Panel", "Sample.Name", "Marker", "Size.a1", "Size.a2")
 
