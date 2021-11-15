@@ -5,7 +5,7 @@ This respository contains instructions and scripts for analysing short sequence 
 # Step 1: Create an R Project directory.
 This step is essential to ensure your data and results are well organised and recorded. Data analysis must be properly recorded. Just like you have to keep an accurate record of your what you did in the lab (lab book) you must also keep an accurate record of your analysis, and just like a lab book, this should be clear enough that someone can assess your methods and replicate your work. If you store all relevenat files in a well organised directory (folder) with appropriately named subdirectories, this will help enormously.
 
-Name the folder accordingly. Do not use spaces or weird characters (*#%&=!*) in your folder or filenames (eg. use ounderscore '_'_ instead of spaces)
+Name the folder accordingly. Do not use spaces or weird characters (*#%&=!*) in your folder or filenames (eg. use underscore '_'_ instead of spaces)
 In this directory create the following sub directories 
 - data
 - plots
@@ -18,7 +18,7 @@ Nothing else should go into the 'data' subdirectory.
 
 # Step 3: Copy files from this repository 
 There are a couple of ways to copy the files from github. An easy option is dowload the directory. Click on code and choose download zip.
-Unzip the file and then move the R scripts into  'scripts' subdirectory and  the 'MsatAllele_1.05.tar.gz' to the 'paackage' subdirectory.
+Unzip the file and then move the R scripts into  'scripts' subdirectory and  the 'MsatAllele_1.05.tar.gz' to the 'package' subdirectory.
 
 # Step 4: Create an R Project
 To install or unpdate R and R Studio use the following links.
