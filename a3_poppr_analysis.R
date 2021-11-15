@@ -14,7 +14,7 @@
 # We will edit the file you made before (out/Results_{SSR name}.csv) in excel. 
 
 # HINTS: 
-# We need to make one file wiht all the allele size information together  
+# We need to make one file with all the allele size information together  
 # Pop = Cultivar
 # Make the data haploid (one column (allele) per SSR)
 
@@ -55,7 +55,6 @@ mlg.tab
 # We want to know the number of clones and for some later analysis we want to remove them 
 # Removing clones is called clone correction
 
-# 
 res.cc <- clonecorrect(res)
 
 # Compare before and after clone correction
@@ -64,7 +63,7 @@ res
 
 # What does the summary tell you?
 # How many individuals are removed?
-# how many clones were there in the res?
+# How many clones were there in the res?
 
 
 #############################################
